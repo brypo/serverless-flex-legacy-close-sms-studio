@@ -17,9 +17,9 @@ In the `Run Function` Widget from the Studio Flow, pass the following key/value 
 
 | Variable | Studio Reference |
 | ----- | ---- |
-| Chat Channel SID | {{trigger.message.ChannelSid}}
-| Chat Service SID | {{trigger.message.InstanceSid}}
-| Proxy Session SID | {{trigger.message.ChannelAttributes.proxySession}}
+| channelSid | {{trigger.message.ChannelSid}}
+| instanceSid | {{trigger.message.InstanceSid}}
+| proxySessionSid | {{trigger.message.ChannelAttributes.proxySession}}
 
 
 ## disclaimer
