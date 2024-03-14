@@ -1,10 +1,10 @@
-# Twilio Serverless Function to Terminate a Studio/Flex SMS Interaction
+# Twilio Serverless Function to Terminate a Legacy Studio/Flex SMS Interaction
 
-This Twilio Serverless Function code will end a Flex SMS interaction in Studio. 
+This Twilio Serverless Function code will end a **legacy** Flex SMS interaction in Studio (Programmable Chat/Proxy). 
 
 Two major actions are completed:
-1. Deactive the Chat Channel resource
-2. Delete the associated Proxy Session resource
+1. [Deactive the Chat Channel](https://www.twilio.com/docs/chat/rest/channel-resource#update-a-channel-resource) resource
+2. [Delete the associated Proxy Session](https://www.twilio.com/docs/proxy/api/session#delete-a-session-resource) resource
 
 ## environment variables
 | Variable | Resource |
