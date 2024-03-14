@@ -33,7 +33,7 @@ const deactivateChatChannel = async (client, channelSid, instanceSid) => {
         let channel = await client.chat.v2.services(instanceSid)
             .channels(channelSid)
             .fetch();
-        let newAttr = JSON.parse(channel.attributes);
+        let newAttr = JSON.parse(channel.attributes)
 
         // set the "status" to INACTIVE
         newAttr.status = "INACTIVE";
@@ -41,12 +41,12 @@ const deactivateChatChannel = async (client, channelSid, instanceSid) => {
         // update chat channel with new attributes
         await client.chat.v2.services(instanceSid)
             .channels(channel.sid)
-            .update({ attributes: JSON.stringify(newAttr) });
+            .update({ attributes: JSON.stringify(newAttr) })
 
-        console.log(`chat channel ${channelSid} deactivated`);
+        console.log(`chat channel ${channelSid} deactivated`)
     }
     catch(e) {
-        console.error(`Chat channel ${channelSid} failed to update to INACTIVE`);
+        console.error(`Chat channel ${channelSid} failed to update to INACTIVE`)
         throw new Error(JSON.stringify(e))
     }
 }
@@ -55,12 +55,12 @@ const deleteProxySession = async (client, proxySessionSid, proxyServiceSid) => {
     try {
         await client.proxy.v1.services(proxyServiceSid)
             .sessions(proxySessionSid)
-            .remove();
+            .remove()
 
         console.log(`proxy session ${proxySessionSid} deleted`)
     }
     catch(e) {
-        console.error(`Proxy ${proxySessionSid} failed to delete`);
+        console.error(`Proxy ${proxySessionSid} failed to delete`)
         throw new Error(JSON.stringify(e))
     }
 }
