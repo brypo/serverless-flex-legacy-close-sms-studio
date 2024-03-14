@@ -13,10 +13,10 @@ exports.handler = async function(context, event, callback) {
 
     try {
         // deactivate chat channel
-        await deactivateChatChannel(channelSid, instanceSid)
+        await deactivateChatChannel(client, channelSid, instanceSid)
     
         // delete the associated proxy session
-        await deleteProxySession(proxySessionSid, proxyServiceSid)
+        await deleteProxySession(client, proxySessionSid, proxyServiceSid)
     } 
     catch(e) {
         console.error(e)
